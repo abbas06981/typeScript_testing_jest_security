@@ -6,6 +6,8 @@ import { usePathname } from "next/navigation";
 const navLinks = [
   { href: "/typescript", label: "TypeScript" },
   { href: "/testing", label: "Testing" },
+  { href: "/react", label: "React" },
+  { href: "/nextjs", label: "Next.js" },
 ];
 
 export default function Navbar() {

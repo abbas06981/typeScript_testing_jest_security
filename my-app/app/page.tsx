@@ -19,6 +19,24 @@ const sections = [
     color: "bg-emerald-600",
     topics: ["Jest", "Unit Testing", "Integration"],
   },
+  {
+    href: "/react",
+    title: "React",
+    description:
+      "Explore components, hooks, state management, and patterns for building modern React applications.",
+    icon: "⚛",
+    color: "bg-cyan-500",
+    topics: ["Components", "Hooks", "State Management"],
+  },
+  {
+    href: "/nextjs",
+    title: "Next.js",
+    description:
+      "Deep dive into App Router, server components, data fetching, and deployment with Next.js.",
+    icon: "N",
+    color: "bg-gray-800",
+    topics: ["App Router", "Server Components", "Data Fetching"],
+  },
 ];
 
 export default function Home() {
@@ -30,27 +48,19 @@ export default function Home() {
           DevDocs
         </h1>
         <p className="text-lg text-gray-400 max-w-xl mx-auto">
-          A hands-on reference for TypeScript and Testing — pick a topic and
-          start learning.
+          A hands-on reference for TypeScript, Testing, React, and Next.js —
+          pick a topic and start learning.
         </p>
-        <div className="mt-8 flex justify-center gap-4">
-          <Link
-            href="/typescript"
-            className="px-6 py-3 bg-blue-600 hover:bg-blue-700 rounded-lg font-medium transition-colors"
-          >
-            TypeScript Docs
-          </Link>
-          <Link
-            href="/testing"
-            className="px-6 py-3 bg-emerald-600 hover:bg-emerald-700 rounded-lg font-medium transition-colors"
-          >
-            Testing Docs
-          </Link>
+        <div className="mt-8 flex flex-wrap justify-center gap-3">
+          <Link href="/typescript" className="px-5 py-2.5 bg-blue-600 hover:bg-blue-700 rounded-lg font-medium transition-colors text-sm">TypeScript</Link>
+          <Link href="/testing" className="px-5 py-2.5 bg-emerald-600 hover:bg-emerald-700 rounded-lg font-medium transition-colors text-sm">Testing</Link>
+          <Link href="/react" className="px-5 py-2.5 bg-cyan-500 hover:bg-cyan-600 rounded-lg font-medium transition-colors text-sm">React</Link>
+          <Link href="/nextjs" className="px-5 py-2.5 bg-gray-700 hover:bg-gray-600 rounded-lg font-medium transition-colors text-sm">Next.js</Link>
         </div>
       </section>
 
       {/* Cards */}
-      <section className="max-w-4xl mx-auto w-full px-6 py-16 grid gap-8 sm:grid-cols-2">
+      <section className="max-w-5xl mx-auto w-full px-6 py-16 grid gap-8 sm:grid-cols-2 lg:grid-cols-2">
         {sections.map((section) => (
           <Link
             key={section.href}
